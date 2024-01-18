@@ -1,9 +1,11 @@
 /**
  * File for a Song class to be used in the Playlist Project
- * @author
- * @version
+ * @author Richard White
+ * @version 2024-01-18
  */
+
 public class Song {
+
     //Fields-- what information do we want each Song to store?
     private String songName;
     private String artist;
@@ -21,9 +23,6 @@ public class Song {
         this.duration = duration;
         liked = false;
     }
-
-
-
 
      /**
       * Methods-- what will you want each Song to do?
@@ -72,5 +71,11 @@ public class Song {
     public void unlike()
     {
         liked = false;
+    }
+
+    public String toString()
+    {
+        return "Song[songName=" + songName + ",artist=" + artist +
+               ",duration=" + duration + ",liked=" + liked + "]";
     }
 }
