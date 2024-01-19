@@ -3,13 +3,17 @@
  * playlist in the main method. You don't need to follow the testing specifications of this exactly
  * if you want to write your own separate tester instead.
  * Note that there's no need for a Scanner in this project-- all of the playlist can be 'hardcoded' into main.
- * @author
- * @version
+ * @author Richard White
+ * @version 2024-01-18
  */
-public class PlaylistTester {
+public class PlaylistTester 
+{
+    
     public static void main(String[] args) {
+        
         System.out.println("Initializing a Playlist...\n");
         //Make your playlist here
+        Playlist p = new Playlist();
 
         System.out.println("Adding songs to the Playlist...\n");
         /**
@@ -17,13 +21,19 @@ public class PlaylistTester {
          * is something like...
          * p.addSong(new Song(..., ..., ...))
          */
-
-
+        p.add(new Song("Rock and Roll","Led Zeppelin", "3:40"));
+        p.add("Willow", "Taylor Swift", "3:34");
+        p.add("Beyonce", "Sorry", "3:52");
 
         System.out.println("Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly
-
-
+        for (Song s : p.getAllSongs())
+        {
+            System.out.println(s);
+        }
+ 
+        /* 
+        
         System.out.println("\nLiking the songs in position X, Y, Z, etc....\n");
         //Once your songs are 'liked', this should be reflected in the next printout
 
@@ -32,6 +42,7 @@ public class PlaylistTester {
 
 
         System.out.println("\nRemoving the song in position A, B, C, etc...\n");
+        p.remove("Rock and Roll");
 
 
         System.out.println("Printing the songs...\n");
@@ -51,5 +62,8 @@ public class PlaylistTester {
 
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
+
+        */
+
     }
 }
